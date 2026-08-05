@@ -1,10 +1,27 @@
-# ALPACA
+# ALPACA interactive website
+
+This repository hosts the interactive website accompanying the
+*BMC Medical Genomics* article:
+
+> Minwoo Pak, Dabin Jeong, Sungjoon Park, Jeonghyeon Gu, Sangseon Lee, and
+> Sun Kim. **ALPACA: A Visual Data Mining System for Subcellular
+> Location-specific Knowledge Mining from Multi-Omics Data in Cancer.**
+> *BMC Medical Genomics* (forthcoming publication).
 
 ALPACA (A Location-wise Proteome/transcriptome Abundance Comparative Analyzer)
 is a browser-based visual data-mining tool for comparing cancer transcriptomic
 and proteomic abundance by subcellular location and biological pathway.
 
-The public site is a static export of the original Django frontend. It does not
+- Interactive website: https://mwpak.github.io/ALPACA/
+- Source code: https://github.com/mwpak/ALPACA_code
+
+The final volume, article number, and DOI will be added when the journal
+citation is available.
+
+## About this repository
+
+The website is a static export of the original Django frontend. All datasets
+and visualization logic run in the browser, so the deployed site does not
 require Django, a database, or an API server.
 
 ## Repository layout
@@ -15,6 +32,17 @@ require Django, a database, or an API server.
   `docs/static/frontend/`.
 - `docs/static/data/` contains the datasets loaded by the browser.
 
+## Local preview
+
+Serve `docs/` over HTTP because browser data requests are blocked when
+`index.html` is opened directly with a `file://` URL:
+
+```sh
+python3 -m http.server 8000 --directory docs
+```
+
+Then open http://localhost:8000/.
+
 ## Build the frontend
 
 ```sh
@@ -22,6 +50,3 @@ cd frontend
 npm ci
 npm run build
 ```
-
-Serve `docs/` over HTTP when testing; browser data requests will not work
-reliably from a `file://` URL.
