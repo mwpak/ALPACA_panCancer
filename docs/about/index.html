@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="About ALPACA and its location-wise multi-omics comparison workflow."
+    >
+    <title>ALPACA — About</title>
+
+    <link rel="icon" href="../static/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/about.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#readme">Skip to the documentation</a>
+    <nav
+      id="mainNavbar"
+      class="navbar navbar-dark navbar-expand-lg py-1 fixed-top"
+      aria-label="Primary navigation"
+    >
+      <a class="navbar-brand brand-lockup" href="../">
+        <img
+          id="alpaca-icon"
+          src="../static/images/favicon.png"
+          width="50"
+          height="50"
+          alt=""
+        >
+        <span>ALPACA</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navLinks"
+        aria-controls="navLinks"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="./" aria-current="page">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="readme" class="container">
+      <h1>ALPACA</h1>
+      <p class="lead">
+        A Location-wise Proteome/transcriptome Abundance Comparative Analyzer
+      </p>
+      <p>
+        ALPACA is a web-based visual data-mining system for subcellular
+        location-specific knowledge mining from multi-omics data. It lets
+        researchers visually compare transcriptomic and proteomic abundance
+        across cancer types by subcellular location and biological function.
+      </p>
+      <p>
+        ALPACA calculates location-enrichment distributions from cancer
+        transcriptomic and proteomic abundance data, then presents the results
+        in a pathway-specific view. This makes differences in abundance
+        enrichment easier to interpret in the biological context of interest.
+      </p>
+
+      <figure class="img-container">
+        <img
+          id="workflow"
+          class="figure"
+          src="../static/images/0.Workflow.png"
+          alt="Overview of the ALPACA comparison workflow"
+        >
+      </figure>
+
+      <section>
+        <h2>Step 1. Select data</h2>
+        <p>Select the omics types and cancer types to compare. You can compare:</p>
+        <ul>
+          <li>Proteomics from two different cancers</li>
+          <li>Transcriptomics from two different cancers</li>
+          <li>Transcriptomics and proteomics from one cancer type</li>
+        </ul>
+        <figure class="img-container">
+          <img
+            class="figure"
+            src="../static/images/1.data-selection.png"
+            alt="ALPACA controls for selecting omics and cancer datasets"
+          >
+        </figure>
+      </section>
+
+      <section>
+        <h2>Step 2. Select pathways</h2>
+        <p>
+          After selecting a dataset pair, ALPACA displays location enrichment—the
+          normalized average abundance of genes or proteins—on the cell diagram.
+          Select one or more pathways to add biological context to the analysis.
+        </p>
+        <p>
+          Pathways can be sorted by the degree of discrepancy between the two
+          cancers. Selecting a pathway or pathway category filters the data to
+          proteins related to that selection.
+        </p>
+        <figure class="img-container">
+          <img
+            class="figure"
+            src="../static/images/2.pathway-selection.png"
+            alt="ALPACA pathway-selection table"
+          >
+        </figure>
+      </section>
+
+      <section>
+        <h2>Raw and reset controls</h2>
+        <p>
+          <strong>Raw</strong> shows location-enrichment values without
+          normalization, using average abundance values from the original gene
+          expression or protein-quantification data.
+        </p>
+        <p>
+          <strong>Reset Parameters</strong> clears selected datasets and pathways
+          and returns the analyzer to its default view.
+        </p>
+        <figure class="img-container">
+          <img
+            class="figure"
+            src="../static/images/raw-and-reset-buttons.png"
+            alt="Raw and Reset Parameters controls"
+          >
+        </figure>
+      </section>
+
+      <section>
+        <h2>Step 3. Compare location-specific heatmaps</h2>
+        <p>
+          ALPACA quantifies differences between cancers using mean squared error
+          (MSE) and Kullback–Leibler divergence (KLD). The pathway list can be
+          sorted by MSE or KLD in descending order. Bar charts beneath the cell
+          diagrams present the same location-distribution information in another
+          form.
+        </p>
+        <figure class="img-container">
+          <img
+            class="figure"
+            src="../static/images/3.cell-diagram.png"
+            alt="Side-by-side subcellular location heatmaps in ALPACA"
+          >
+        </figure>
+      </section>
+
+      <section>
+        <h2>Step 4. Identify potential key proteins</h2>
+        <p>
+          Examine proteins that may drive similarities or differences in
+          location enrichment. Select a compartment in a cell diagram to filter
+          the table to proteins localized there.
+        </p>
+        <figure class="img-container">
+          <img
+            id="protein-table"
+            class="figure"
+            src="../static/images/protein-table.png"
+            alt="Protein table filtered by subcellular location"
+          >
+        </figure>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

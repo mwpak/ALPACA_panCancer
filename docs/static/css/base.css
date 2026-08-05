@@ -1,0 +1,86 @@
+:root {
+  --alpaca-ink: #17383a;
+  --alpaca-green: #00363a;
+  --alpaca-mint: #c7f9cc;
+  --alpaca-paper: #ffffff;
+  --alpaca-line: #adb5bd;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--alpaca-paper);
+  color: var(--alpaca-ink);
+  margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #f9c74f;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.75rem;
+  z-index: 1100;
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.35rem;
+  background: #ffffff;
+  color: var(--alpaca-green);
+  font-weight: 700;
+  transform: translateY(-150%);
+  transition: transform 150ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+#mainNavbar {
+  background-color: var(--alpaca-green);
+  box-shadow: 0 3px 16px rgba(0, 54, 58, 0.22);
+  font-weight: 600;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#alpaca-icon {
+  width: 50px;
+  height: 50px;
+  margin-left: 1.4rem;
+  object-fit: contain;
+}
+
+.noscript-message {
+  margin: 6rem auto 2rem;
+  max-width: 42rem;
+  padding: 1rem;
+  border: 2px solid #a12a2a;
+  border-radius: 0.5rem;
+  background: #fff5f5;
+  text-align: center;
+}
+
+@media (max-width: 575.98px) {
+  #alpaca-icon {
+    margin-left: 0;
+  }
+}
