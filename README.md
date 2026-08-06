@@ -1,19 +1,24 @@
-# ALPACA interactive website
+# ALPACA_panCancer
 
-This repository hosts the interactive website accompanying the
-*BMC Medical Genomics* article:
+ALPACA_panCancer provides the interactive, precomputed pan-cancer abundance
+data analyses for **ALPACA (A Location-wise Proteome/transcriptome Abundance
+Comparative Analyzer)**, accompanying the *BMC Medical Genomics* article:
 
 > Minwoo Pak, Dabin Jeong, Sungjoon Park, Jeonghyeon Gu, Sangseon Lee, and
 > Sun Kim. **ALPACA: A Visual Data Mining System for Subcellular
 > Location-specific Knowledge Mining from Multi-Omics Data in Cancer.**
 > *BMC Medical Genomics* (forthcoming publication).
 
-ALPACA (A Location-wise Proteome/transcriptome Abundance Comparative Analyzer)
-is a browser-based visual data-mining tool for comparing cancer transcriptomic
-and proteomic abundance by subcellular location and biological pathway.
+ALPACA is a browser-based visual data-mining tool for comparing cancer
+transcriptomic and proteomic abundance by subcellular location and biological
+pathway.
 
-- Interactive website: https://mwpak.github.io/ALPACA/
-- Source code: https://github.com/mwpak/ALPACA_code
+- **Launch ALPACA_panCancer:** https://mwpak.github.io/ALPACA_panCancer/
+- **Main ALPACA source code repository:** https://github.com/mwpak/ALPACA
+
+This repository contains the static GitHub Pages deployment and precomputed
+pan-cancer datasets. For the ALPACA source code, installation instructions,
+and continued development, please visit the main ALPACA repository.
 
 The final volume, article number, and DOI will be added when the journal
 citation is available.
