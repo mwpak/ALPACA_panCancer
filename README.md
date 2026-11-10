@@ -7,7 +7,8 @@ Comparative Analyzer)**, accompanying the *BMC Medical Genomics* article:
 > Minwoo Pak, Dabin Jeong, Sungjoon Park, Jeonghyeon Gu, Sangseon Lee, and
 > Sun Kim. **ALPACA: A Visual Data Mining System for Subcellular
 > Location-specific Knowledge Mining from Multi-Omics Data in Cancer.**
-> *BMC Medical Genomics* (forthcoming publication).
+> *BMC Medical Genomics* **16** (Suppl 1), 336 (2026).
+> DOI: [10.1186/s12920-026-02440-4](https://doi.org/10.1186/s12920-026-02440-4)
 
 ALPACA is a browser-based visual data-mining tool for comparing cancer
 transcriptomic and proteomic abundance by subcellular location and biological
@@ -19,9 +20,6 @@ pathway.
 This repository contains the static GitHub Pages deployment and precomputed
 pan-cancer datasets. For the ALPACA source code, installation instructions,
 and continued development, please visit the main ALPACA repository.
-
-The final volume, article number, and DOI will be added when the journal
-citation is available.
 
 ## About this repository
 
